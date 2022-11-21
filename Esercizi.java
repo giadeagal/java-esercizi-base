@@ -18,7 +18,7 @@ public class Esercizi {
         System.out.println();
       }
 
-      static void fibonacciamo(int laps) {
+    static void fibonacciamo(int laps) {
         int num1 = 0;
         int num2 = 1;
         int result;
@@ -35,7 +35,8 @@ public class Esercizi {
         }
         System.out.println();
       }
-    public static void main(String[] args) {
+
+      public static void main(String[] args) {
         //Con funzione a 2 argomenti (lunghezza e numero di partenza)
         fibonacciamo(5, 6);
 
