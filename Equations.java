@@ -1,6 +1,6 @@
 public class Equations {
     public static void main(String[] args) {
-        menoEquazioniPiuRigatoni(12,1,27);
+        menoEquazioniPiuRigatoni(1,1,1);
     }
 
     public static void menoEquazioniPiuRigatoni(int coeffGrado2, int coeffGrado1, int termineNoto) {
