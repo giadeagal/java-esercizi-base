@@ -1,15 +1,18 @@
 public class Esercizi {
     public static void main(String[] args) {
-        int numGiri = 5;
-        int numPartenza = 0;
+        int laps = 20;
+        int num1 = 0;
+        int num2 = 1;
+        int result;
 
-        for(int i = numPartenza; i < numGiri; i++ ) {
-            if(i == 0) {
-                System.out.println(0);
-                for (int j = 0; j < 2; j++) {
-                    System.out.println(1);
-                }
+        for(int i = 0; i < laps; i++ ) {
+            if (i == 0) {
+                System.out.print(num1 + " " + num2);
             }
+            result = num1 + num2;    
+            System.out.print(" "+ result);    
+            num1 = num2;    
+            num2 = result;  
         }
     }
 }
