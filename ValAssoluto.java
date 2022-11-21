@@ -10,5 +10,7 @@ public class ValAssoluto {
         } else {
             System.out.println(num);
         }
+
+        sc.close();
     }
 }
