@@ -15,6 +15,9 @@ public class Sommatrice {
         Scanner sc = new Scanner(System.in);
         System.out.println("Inserisci un numero");
         int num = sc.nextInt();
+        if (num == 0) {
+            
+        }
         return num;
     }
     }
