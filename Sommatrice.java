@@ -16,6 +16,7 @@ public class Sommatrice {
             } else {
                 tot += num;
             }
+            sc.close();
         }
    } 
 }
