@@ -2,15 +2,18 @@ import java.util.Random;
 
 public class MatrixAvg {
     public static void main(String[] args) {
-        int matrixSide = (getRandomInt(10));
+        int matrixSide = getRandomInt(10);
+        while (matrixSide == 0 || matrixSide == 1) {
+            matrixSide = getRandomInt(10);
+        }
         int[][] matrix1 = getRandomMatrix(matrixSide, matrixSide);
-        
+
     }
 
     public static int getRandomInt(int max) {
-        Random rand = new Random();
+        Random randomize = new Random();
         int upperbound = max+1;
-        int randoNum = rand.nextInt(upperbound);
+        int randoNum = randomize.nextInt(upperbound);
         return randoNum;
     }
 
