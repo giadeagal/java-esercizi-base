@@ -16,6 +16,7 @@ public class Decrescente {
         Scanner sc = new Scanner(System.in);
         System.out.println("Inserisci un numero composto da 5 cifre");
         int num = sc.nextInt();
+        sc.close();
         return num;
     }
 

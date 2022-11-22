@@ -13,5 +13,6 @@ public class PariDispari {
         } else {
             System.out.println(num + " è un numero dispari");
         }
+        sc.close();
     }
 }
