@@ -6,15 +6,21 @@ public class DiagonalMatrix {
     public static void diagonalMatrixChar(int sideLength, char letter) {
         char[][] matrix = new char[sideLength][sideLength];
 
+        //Posizioni X e Y in cui stampare il carattere
+        int char1PosY = 0;
+        int char1PosX = 0;
+        
+        
+
         //Scorro le righe
-        for (int i = 0; i < sideLength; i++ ) {
+        for (int x = 0; x < sideLength; x++ ) {
 
             //Ad ogni riga scorro le colonne
-            for (int j = 0; j < sideLength; j++) {
-                matrix[i][j] = '0';
-                System.out.print(matrix[i][j]);
+            for (int y = 0; y < sideLength; y++) {
+                
             }
             System.out.println("");
+            
         }
 
     }
