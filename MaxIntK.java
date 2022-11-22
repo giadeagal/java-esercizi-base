@@ -24,10 +24,16 @@ public class MaxIntK {
 
     public static void getMaxIntK(int n) {
         int k = 0;
-        for(int i = 1; i <= n; i++) {            
-            System.out.println("K= " + k);
-            System.out.println("i= " + i);
-            System.out.println();
+        for(int i = 1; i <= n; i++) {
+            if (k < n) {
+                System.out.println("K nell'if = " + k);
+                k+= i;
+            } else {
+                System.out.println("K-1 = " + (k-1));
+                break;
+            }
+            
+            System.out.println("k= " + k);
         } 
     }
 }
