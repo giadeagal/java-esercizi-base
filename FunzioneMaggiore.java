@@ -19,6 +19,8 @@ public class FunzioneMaggiore {
                 isRunning = false;
                 System.out.println("Il numero maggiore tra quelli inseriti è " + baseNum );
             }
+
+            r.close();
             }
         }
     }
