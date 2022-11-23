@@ -5,23 +5,27 @@ import java.io.FileNotFoundException;
 public class WordSearch {
     public static void main(String[] args) throws FileNotFoundException {
         File cinqueMaggio = new File("test.txt");
-        System.out.println(searchWord("immobile", cinqueMaggio));
+        System.out.println(searchWord("Solio", cinqueMaggio, true));
     }
 
-    public static boolean searchWord(String WordToSearch, File targetFile) throws FileNotFoundException {
+    public static boolean searchWord(String wordInput, File targetFile, boolean caseSensitive) throws FileNotFoundException {
         boolean result = false;
-
         Scanner reader = new Scanner(targetFile);
+        String wordToSearch;
+        if(!caseSensitive) {
+            wordToSearch = wordInput.toLowerCase();
+        } else {
+            wordToSearch = wordInput;
+        }
+        
 
-        if (reader.nextLine().contains(WordToSearch)) {
-            reader.close();            
-            result = true;            
-            return result;
-       } else {
-        reader.close(); 
+        while (reader.hasNextLine()) {
+            if (reader.nextLine().contains(wordToSearch)) {
+                result = true;
+                break;
+            }
+        }
+        reader.close();
         return result;
-       }
-
     }
-
 }
