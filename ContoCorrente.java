@@ -47,5 +47,26 @@ public class ContoCorrente {
     public Movimento[] getListaMovimenti() {
         return this.listaMovimenti;
     }
+
+    //SETTERS
+    public void setCodice(String codice) {
+        this.codice = codice;
+    }
+
+    public void setIntestatario(Persona intestatario) {
+        this.intestatario = intestatario;
+    }
+
+    public void setSaldo(int saldo) {
+        this.saldo = saldo;
+    }
+
+    public void setNumeroMovimenti(int numMov) {
+        this.numeroMovimenti = numMov;
+    }
+
+    public void setListaMovimenti(Movimento[] movList) {
+        this.listaMovimenti = movList; 
+    }
 }
 
