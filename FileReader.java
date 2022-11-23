@@ -1,24 +1,30 @@
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 
-//Legge le righe di un file
+
+
+//Legge le righe di un file 
 //Le scrive in un altro file
 //Scrive anche il numero di ogni riga
 
 public class FileReader {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, IOException {
         File fileToRead = new File("Test.txt");
-        int line = 1;
-        try {
-            Scanner read = new Scanner(fileToRead);
-            while(read.hasNextLine()) {
-                System.out.println(line + "   "+ read.nextLine());
-                line++;
-            }
-            read.close();
-        } catch (Exception e){
-            System.out.println(e);
+        int lineNum = 1;
+
+        Scanner reader = new Scanner(fileToRead);
+        FileWriter writer = new FileWriter("manzoni.txt");
+
+        while(reader.hasNextLine()) {
+            String lineContent = reader.nextLine();
+            writer.write(lineNum + "   " + lineContent + "\n");
+            lineNum++;
         }
+        reader.close();
+        writer.close();    
+        } 
     }
-}
+
