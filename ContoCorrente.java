@@ -2,25 +2,26 @@ public class ContoCorrente {
     private String codice;
     private Persona intestatario;
     private int saldo;
+    private String valuta;
     private int numeroMovimenti;
     private Movimento[] listaMovimenti;
 
     //COSTRUTTORI
-    public ContoCorrente (String codice, Persona intestatario) {
+    public ContoCorrente (String codice, Persona intestatario, String valuta) {
         this.codice = codice;
         this.intestatario = intestatario;
         this.saldo = 0;
         this.numeroMovimenti = 0;
     }
     
-    public ContoCorrente (String codice, Persona intestatario, int saldo) {
+    public ContoCorrente (String codice, Persona intestatario, String valuta, int saldo) {
         this.codice = codice;
         this.intestatario = intestatario;
         this.saldo = saldo;
         this.numeroMovimenti = 0;
     }
 
-    public ContoCorrente (String codice, Persona intestatario, int saldo, int numeroMovimenti) {
+    public ContoCorrente (String codice, Persona intestatario, String valuta, int saldo, int numeroMovimenti) {
         this.codice = codice;
         this.intestatario = intestatario;
         this.saldo = saldo;
@@ -34,6 +35,10 @@ public class ContoCorrente {
 
     public Persona getIntestatario() {
         return this.intestatario;
+    }
+
+    public String getValuta() {
+        return this.valuta;
     }
 
     public int getSaldo() {
@@ -57,16 +62,18 @@ public class ContoCorrente {
         this.intestatario = intestatario;
     }
 
-    public void setSaldo(int saldo) {
-        this.saldo = saldo;
-    }
-
-    public void setNumeroMovimenti(int numMov) {
-        this.numeroMovimenti = numMov;
-    }
-
-    public void setListaMovimenti(Movimento[] movList) {
-        this.listaMovimenti = movList; 
+    //METODI
+    public void prelievo(int somma) {
+        if (somma > this.saldo) {
+            System.out.println("HEHE, no.");
+        } else if (somma < 0) {
+            System.out.println("Usa la funzione deposito per versare denaro");
+        } else {
+            System.out.println("Spendili coscienziosamente.");
+            this.saldo -= somma;
+            numeroMovimenti++; //come lo metto nel costruttore del movimento?
+            Movimento prelievo = 
+        }
     }
 }
 
